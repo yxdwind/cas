@@ -4,7 +4,7 @@
 This branch hosts the [Docker](https://www.docker.com/) build configuration necessary to build a CAS image. See the `Dockerfile` for more info. 
 
 ## Versions
-A docker image for CAS server `v4.1.2`. Images are tagged to match CAS server releases.
+A docker image for CAS server `v4.1.3`. Images are tagged to match CAS server releases.
 
 ## Requirements
 * Minimum of Docker version `1.9.x`
