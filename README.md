@@ -4,7 +4,7 @@
 This branch hosts the [Docker](https://www.docker.com/) build configuration necessary to build a CAS image. See the `Dockerfile` for more info. 
 
 ## Versions
-A docker image for CAS server `v4.1.1`. Images are tagged to match CAS server releases.
+A docker image for CAS server `v4.1.3`. Images are tagged to match CAS server releases.
 
 ## Requirements
 * Minimum of Docker version `1.9.x`
@@ -19,7 +19,7 @@ A docker image for CAS server `v4.1.1`. Images are tagged to match CAS server re
 
 ## CAS Overlay
 * The build will automatically copy the contents of the `src\main\webapp` to the docker image. 
-* You can set up your own custom overlay project based that directory structure that mimics that of the CAS web application itself. 
+* You can set up your own custom overlay project based on a directory structure that mimics that of the CAS web application itself. 
  
 ### SSL
 * Update the `thekeystore` file with the server certificate and chain if you need access the CAS server via HTTPS. 
@@ -47,7 +47,7 @@ The image will be built as `apereo/cas:v$CasVersion`.
 ## Release
 * New images shall be released at the time of a new CAS server release.
 * Image versions are reflected in the `build|run.sh` files and need to be updated per CAS/Image release.
-* Images are published to [https://hub.docker.com/u/apereo/](https://hub.docker.com/u/apereo/)
+* Images are published to [https://hub.docker.com/r/apereo/cas/](https://hub.docker.com/r/apereo/cas/)
 * Log into the Docker Hub via the following command:
 
 ```bash

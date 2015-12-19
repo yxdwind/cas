@@ -4,8 +4,7 @@ MAINTAINER Apereo Foundation
 
 ENV PATH=$PATH:$JRE_HOME/bin
 
-RUN yum -y update \
-    && yum -y install wget tar git-all \
+RUN yum -y install wget tar git-all \
     && yum -y clean all
 
 RUN set -x; \
@@ -25,7 +24,7 @@ RUN set -x; \
 
 # Download the CAS overlay project \
 RUN cd / \
-    && git clone https://github.com/UniconLabs/simple-cas4-overlay-template.git cas-overlay \
+    && git clone https://github.com/Jasig/cas-overlay-template.git cas-overlay \
     && mkdir /etc/cas \
     && mkdir /etc/cas/jetty \
     && mkdir -p cas-overlay/bin \
@@ -34,7 +33,7 @@ RUN cd / \
 
 COPY src/main/webapp/ cas-overlay/src/main/webapp/
 COPY thekeystore /etc/cas/jetty/
-COPY bin/*.* cas-overlay/bin
+COPY bin/*.* cas-overlay/bin/
 
 RUN chmod -R 750 cas-overlay/bin \
     && chmod 750 cas-overlay/mvnw \
@@ -42,5 +41,12 @@ RUN chmod -R 750 cas-overlay/bin \
 	&& chmod 750 /opt/jre-home/jre/bin/java;
 
 EXPOSE 8080 8443
+
+WORKDIR /cas-overlay
+
+ENV JAVA_HOME /opt/jre-home
+ENV PATH $PATH:$JAVA_HOME/bin:.
+
+RUN ./mvnw clean package
 
 CMD ["/cas-overlay/bin/run-jetty.sh"]
