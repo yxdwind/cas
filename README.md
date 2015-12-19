@@ -29,6 +29,9 @@ A docker image for CAS server `v4.1.1`. Images are tagged to match CAS server re
 
 ## Build
 
+**Make sure** that both `build.sh` and `run.sh` are updated to build the appropriate tag. Docker tags MUST correspond
+to CAS server versions. 
+
 ```bash
 ./build.sh
 ```
