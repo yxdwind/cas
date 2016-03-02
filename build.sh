@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build --tag="apereo/cas:v4.1.3" .
+docker build --tag="apereo/cas:v$1" .

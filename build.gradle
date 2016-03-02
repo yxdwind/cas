@@ -5,5 +5,5 @@ allprojects {
 }
 
 task wrapper(type: Wrapper, description: "Gradle's wrapper") {
-    gradleVersion = "2.8"
+    gradleVersion = "2.10"
 }

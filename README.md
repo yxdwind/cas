@@ -4,7 +4,7 @@
 This branch hosts the [Docker](https://www.docker.com/) build configuration necessary to build a CAS image. See the `Dockerfile` for more info. 
 
 ## Versions
-A docker image for CAS server `v4.1.3`. Images are tagged to match CAS server releases.
+A docker image for CAS server. Images are tagged to match CAS server releases.
 
 ## Requirements
 * Minimum of Docker version `1.9.x`
@@ -33,7 +33,7 @@ A docker image for CAS server `v4.1.3`. Images are tagged to match CAS server re
 to CAS server versions. 
 
 ```bash
-./build.sh
+./build.sh $CasVersion
 ```
 
 The image will be built as `apereo/cas:v$CasVersion`.
@@ -41,7 +41,7 @@ The image will be built as `apereo/cas:v$CasVersion`.
 ## Run
 
 ```bash
-./run.sh
+./run.sh $CasVersion
 ```
 
 ## Release
