@@ -29,6 +29,15 @@ A docker image for CAS server. Images are tagged to match CAS server releases.
 
 ## Build
 
+Start Docker:
+
+```bash
+docker-machine start
+docker-machine env
+```
+
+Run the `eval` command next.
+
 **Make sure** that both `build.sh` and `run.sh` are updated to build the appropriate tag. Docker tags MUST correspond
 to CAS server versions. 
 
