@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --expand-war --port $PORT target/*.war
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --expanded-dir-name cas-services --expand-war --path /cas-services --port $PORT target/*.war
