@@ -10,6 +10,7 @@ bin/
 *.iws
 *.orig
 .idea/
+target/
 .DS_Store
 .idea
 overlays/
